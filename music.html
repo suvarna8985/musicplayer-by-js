@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player with js</title>
+    <link rel="stylesheet" href="musicplayer.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="nav">
+        
+         <a href="#">Home</a>
+         <a href="#">Music</a>
+         <a href="#">Artists</a>
+         <a href="#">About</a>
+         <a href="#">Contact</a>
+        <nav>
+        </div> 
+
+            <div class="content">
+                 <div class="left">
+                       <h1>My Music</h1>
+                 </div>
+                 <div class="right">
+                      <h1>click here to listen</h1>
+                     
+                      <!-- <i class=" fa fa-light fa-circle-play" id="icon"></i> -->
+                       <img src="play.jpg" id="icon" class="play"/>
+
+                 </div>
+            <audio id="mysound">
+                <source src="song.mp3.mp3" type="audio/mp3">
+            </audio>
+   <script>
+       let mysound=document.getElementById("mysound");
+       let icon=document.getElementById("icon");
+         icon.onclick=function(){
+          if (mysound.paused) {
+            mysound.play();
+                icon.src ="pause.jpg";
+            } else {
+              mysound.pause();
+                icon.src ="play.png";
+            }
+        }
+         
+          
+   </script>
+</body>
+</html>
